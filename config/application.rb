@@ -34,9 +34,13 @@ module RailsApiTemplate
       allow do
         origins '*'
         resource '*',
-                 :headers => :any,
-                 :expose  => ['access-token', 'expiry', 'token-type', 'uid', 'client'],
-                 :methods => %i[get post options delete put patch]
+                 headers: 'any',
+                 expose: ['access-token',
+                          'expiry',
+                          'token-type',
+                          'uid',
+                          'client'],
+                 methods: %i[get post options delete put patch]
       end
     end
   end
